@@ -1,0 +1,159 @@
+.navbar {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.nav__logo {
+  width: 130px;
+  height: 80px;
+}
+
+.nav__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav__collection {
+  width: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.cutter__navbar {
+  color: var(--bg-py);
+}
+
+.nav__routes {
+  font-size: 16px;
+  font-weight: 500;
+  transition: .3s;
+  cursor: pointer;
+  color: var(--bg-py);
+}
+
+.nav__routes:hover {
+  color: var(--bg-dark);
+}
+
+.navbar__bars {
+  font-size: 20px;
+  display: none;
+}
+
+
+@media screen and (max-width: 1010px) {
+  .nav__collection {
+    gap: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 990px) {
+  .navbar {
+    padding: 0 10px;
+  }
+}
+
+
+@media screen and (max-width: 830px) {
+  .nav__routes {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .nav__collection {
+    gap: 8px;
+  }
+}
+
+
+
+@media screen and (max-width: 802px) {
+  .nav__collection {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    padding: 100px 30px;
+    height: 100vh;
+    display: flex;
+    float: left;
+    align-items: flex-end;
+    flex-direction: column;
+    background: url("../../assets/navbar/sidebarImg.jpg") no-repeat center/cover;
+    z-index: 10;
+    transition: .3s;
+    gap: 20px;
+  }
+
+  .nav__routes {
+    color: var(--bg-light);
+    font-weight: 700;
+    font-size: 19px;
+    border-bottom: 1px solid var(--bg-light);
+    padding-bottom: 5px;
+  }
+
+  .navbar__bars {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    display: block;
+    transform: translateY(-10px);
+    color: var(--bg-py);
+  }
+
+  .nav__collection.activeNav {
+    right: 0;
+  }
+
+  .cutter__navbar {
+    display: none;
+  }
+
+  .nav__wrapper {
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .nav__routes {
+    font-size: 19px;
+  }
+
+  .nav__collection {
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 470px) {
+  .nav__collection {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .nav__collection {
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .nav__routes {
+    font-size: 16px;
+  }
+
+}
